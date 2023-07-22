@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
       <Button />
-      <Icon iconSrc='phone-call11'/>
+      <Icon iconSrc='phone-call'/>
     </main>
   );
 }

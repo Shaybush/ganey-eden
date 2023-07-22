@@ -21,7 +21,12 @@ const Icon: FC<IconProps> = ({ styleClass = '', width = 16, height = 16, iconSrc
 
     const getIconSource = (): string => {
         try {
-            return iconConfig[iconSrc] || undefinedSrc;
+            if (iconConfig.hasOwnProperty(iconSrc)) {
+                return iconConfig[iconSrc] || undefinedSrc;
+            }
+            else {
+                return undefinedSrc;
+            }
         }
         catch {
             return undefinedSrc;
