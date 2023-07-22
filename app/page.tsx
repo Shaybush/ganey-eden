@@ -3,7 +3,7 @@ import Icon from './shared/components/icon/icon';
 export default function Home() {
   return (
     <main>
-      <Button />
+      <Button>Hello</Button>
       <Icon iconSrc='phone-call'/>
     </main>
   );
