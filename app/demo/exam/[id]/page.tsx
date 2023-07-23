@@ -1,6 +1,6 @@
 'use client';
 import { useRef, useState } from "react";
-import { parmasProps, searchParmasProps } from "../../models/demo.model";
+import { parmasProps, searchParmasProps } from "../models/demo.model";
 export default function Exam({ params, searchParams }: {
     params: parmasProps,
     searchParams: searchParmasProps;
