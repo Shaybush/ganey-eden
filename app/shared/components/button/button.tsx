@@ -39,7 +39,7 @@ const buttonVariants = cva(
     }
 );
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+const ButtonShared = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, children, href, variant, size, ...props }, ref) => {
     if (href) {
       return (
@@ -62,6 +62,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     )
   }
 )
-Button.displayName = 'Button'
+ButtonShared.displayName = 'Button'
 
-export default Button;
+export default ButtonShared;
