@@ -1,9 +1,9 @@
 'use client';
 import { useRef, useState } from "react";
-import { parmasProps, searchParmasProps } from "../models/demo.model";
+import { IParmasPropsModel, ISearchParmasPropsModel } from "../models/demo.model";
 export default function Exam({ params, searchParams }: {
-    params: parmasProps,
-    searchParams: searchParmasProps;
+    params: IParmasPropsModel,
+    searchParams: ISearchParmasPropsModel;
 }) {
     const inputRef = useRef(null);
     const renderCount = useRef(0);

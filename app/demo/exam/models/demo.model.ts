@@ -1,7 +1,7 @@
-export interface searchParmasProps {
+export interface ISearchParmasPropsModel {
     count: number;
     name: string;
 }
-export interface parmasProps {
+export interface IParmasPropsModel {
     id: string;
 }
