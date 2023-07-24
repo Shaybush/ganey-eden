@@ -31,8 +31,8 @@ export default async function RootLayout({
   }
 
   return (
-    <html lang={locale} dir={locale == 'he' ? 'rtl' : 'ltr'}>
-      <body>
+    <html suppressHydrationWarning={true} lang={locale} dir={locale == 'he' ? 'rtl' : 'ltr'}>
+      <body suppressHydrationWarning={true} className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Navbar />
           {children}
