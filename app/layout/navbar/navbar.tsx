@@ -1,14 +1,11 @@
 'use client';
 
-import Link from 'next-intl/link';
+import Link from 'next/link';
 import { FC } from 'react';
-import { useTranslations } from 'next-intl';
 
 interface INavbarModel { }
 
 const Navbar: FC<INavbarModel> = ({ }) => {
-    const t = useTranslations('index');
-
     return (
         <header className='bg-slate-400 font-bold'>
             <nav className='p-4'>
