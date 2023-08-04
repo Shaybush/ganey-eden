@@ -1,10 +1,10 @@
 import { FC } from 'react';
-
+import stringConst from '@/public/locales/he/about.json'
 interface IAboutModel { }
 
 const About: FC<IAboutModel> = ({ }) => {
     return (
-        <div>About</div>
+        <div>{stringConst.about_header_1}</div>
     );
 };
 

@@ -24,14 +24,12 @@ export default async function RootLayout({ children }: Props) {
         {/* navbar */}
         <Navbar />
 
-        <div className="flex relative">
+        <div className="relative">
           {/* sidebar */}
-            <Sidebar />
+          <Sidebar />
 
           {/* child app content */}
-          <div className='bg-red-400 w-10/12'>
-            {children}
-          </div>
+          {children}
         </div>
         <Footer />
       </body>
