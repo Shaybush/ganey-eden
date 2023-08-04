@@ -1,5 +1,13 @@
 export interface navbarContriesModel {
-    icon : string,
-    label:string
-    alt?: string
+    icon: string,
+    alt?: string,
+    id: string,
+    locale: string;
+}
+
+export interface navbarLinksModel {
+    label: string,
+    link: string,
+    externalRoute: boolean;
+    id: string;
 }

@@ -15,7 +15,7 @@ interface Props {
 export default async function RootLayout({ children }: Props) {
 
   return (
-    <html suppressHydrationWarning={true} lang='en'>
+    <html suppressHydrationWarning={true} lang='he' dir='rtl'>
       <body suppressHydrationWarning={true} className={inter.className}>
         <Navbar />
         {children}

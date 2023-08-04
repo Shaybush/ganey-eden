@@ -1,30 +1,35 @@
 'use client';
 
+import IconShared from '@/app/shared/components/icon/icon';
+import stringConst from '@/public/locales/he/navbar.json';
 import Link from 'next/link';
 import { FC } from 'react';
+import { navbarContriesConfig, navbarLinksConfig } from './config/navbar.config';
 
 interface INavbarModel { }
 
 const Navbar: FC<INavbarModel> = ({ }) => {
+    const contriesIcons = navbarContriesConfig;
+    const navbarLinks = navbarLinksConfig;
     return (
-        <header className='bg-slate-400 font-bold'>
-            <nav className='p-4'>
-                <div className="flex justify-end">
-                    <Link className='mr-4' href={'/'} locale='es'>es</Link>
-                    <Link className='mr-4' href={'/'} locale='en'>en</Link>
-                    <Link className='mr-4' href={'/'} locale='he'>he</Link>
-                    <Link className='mr-4' href={'/'} locale='ru'>ru</Link>
+        <header className='bg-green-500 font-bold'>
+            <nav className='py-4 px-8 flex justify-between items-center'>
+                <div className="flex items-center uppercase">
+                    {/* pages links */}
+                    {navbarLinks.map(link => (
+                        <div key={link.id} className='mr-4'>
+                            <Link target={link.externalRoute ? '_blank' : '_self'} href={link.link}>{link.label}</Link>
+                        </div>
+                    ))}
                 </div>
-                <div className="flex justify-start uppercase">
-                    <div className="mr-4">
-                        <Link href={'/'}>home</Link>
-                    </div>
-                    <div className="mr-4">
-                        <Link href={'/about'}>about</Link>
-                    </div>
-                    <div className="mr-4">
-                        <Link href={'/contact'}>contact</Link>
-                    </div>
+
+                {/* countries */}
+                <div className="flex">
+                    {contriesIcons.map(country => (
+                        <Link key={country.id} className='mr-3' href={'/'} locale={country.icon}>
+                            <IconShared iconSrc={country.icon} />
+                        </Link>
+                    ))}
                 </div>
             </nav>
         </header>
