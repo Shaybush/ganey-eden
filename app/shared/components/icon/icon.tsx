@@ -3,6 +3,7 @@
 import { iconConfig } from '@/app/core/config/icon.config';
 import { emptyStringImageUtilFunction } from '@/app/lib/utils';
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { FC, useEffect, useState } from 'react';
 
 interface IconProps {
@@ -10,9 +11,10 @@ interface IconProps {
     width?: number;
     height?: number;
     iconSrc: string;
+    link?: string;
 }
 
-const IconShared: FC<IconProps> = ({ styleClass = '', width = 16, height = 16, iconSrc }) => {
+const IconShared: FC<IconProps> = ({ styleClass = '', width = 16, height = 16, iconSrc, link }) => {
     const [icon, setIcon] = useState('/');
     const undefinedSrc = '';
 
@@ -45,8 +47,11 @@ const IconShared: FC<IconProps> = ({ styleClass = '', width = 16, height = 16, i
                     </svg>
                     <span className="sr-only">Loading...</span>
                 </div> :
-                // svg Image
-                <Image className={styleClass} src={icon} width={width} height={height} alt='icon' />
+                link ?
+                    <Link href={link}>
+                        <Image className={styleClass} src={icon} width={width} height={height} alt='icon' />
+                    </Link> :
+                    <Image className={styleClass} src={icon} width={width} height={height} alt='icon' />
             }
         </React.Fragment>
     );

@@ -1,0 +1,78 @@
+/** 
+    * override tailwind classes 
+    1. text
+    2. background
+    3. borders
+*/
+// text
+.text {
+    &-green-300 {
+        color: $primary !important;
+        &:hover{
+            color: $primary !important;
+        }
+    }
+
+    &-secondry {
+        color: $secondry !important;
+    }
+
+    &-success {
+        color: $sucess !important;
+    }
+
+    &-dark {
+        color: $dark !important;
+    }
+
+    &-white {
+        color: $white !important;
+    }
+}
+
+
+//bg
+.bg{
+    &-primary {
+        background: $primary !important;
+    }
+
+    &-secondry {
+        background: $secondry !important;
+    }
+
+    &-success {
+        background: $sucess !important;
+    }
+
+    &-dark {
+        background: $dark !important;
+    }
+
+    &-white {
+        background: $white !important;
+    }
+}
+
+//border
+.border{
+    &-primary {
+        border:1px solid $primary;
+    }
+
+    &-secondry {
+        border:1px solid $secondry;
+    }
+
+    &-success {
+        border:1px solid $sucess;
+    }
+
+    &-dark {
+        border:1px solid $dark;
+    }
+
+    &-white {
+        border:1px solid $white;
+    }
+}
