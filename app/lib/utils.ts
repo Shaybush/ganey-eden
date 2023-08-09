@@ -5,8 +5,8 @@ export function cn(...inputs: ClassValue[]) {
     return twMerge(clsx(inputs));
 }
 
-export function emptyStringImageUtilFunction(image: string): boolean {
-    if (image === undefined || image === null) {
+export function emptyStringUtilFunction(str: string): boolean {
+    if (str === undefined || str === null) {
         return true;
     }
     return false;

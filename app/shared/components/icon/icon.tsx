@@ -1,7 +1,7 @@
 "use client";
 
 import { iconConfig } from '@/app/core/config/icon.config';
-import { emptyStringImageUtilFunction } from '@/app/lib/utils';
+import { emptyStringUtilFunction } from '@/app/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { FC, useEffect, useState } from 'react';
@@ -38,7 +38,7 @@ const IconShared: FC<IconProps> = ({ styleClass = '', width = 16, height = 16, i
 
     return (
         <React.Fragment>
-            {emptyStringImageUtilFunction(icon) ?
+            {emptyStringUtilFunction(icon) ?
                 // loading spinner
                 <div role="status">
                     <svg aria-hidden="true" width={width} height={height} className="text-gray-200 animate-spin fill-green-500" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,7 +1,7 @@
 "use client";
 
 import { imageConfig } from '@/app/core/config/image.config';
-import { emptyStringImageUtilFunction } from '@/app/lib/utils';
+import { emptyStringUtilFunction } from '@/app/lib/utils';
 import Image from 'next/image';
 import React, { FC, useEffect, useState } from 'react';
 
@@ -36,7 +36,7 @@ const ImageShared: FC<IImageSharedModel> = ({ styleClass = '', width = 16, heigh
 
     return (
         <React.Fragment>
-        {emptyStringImageUtilFunction(image) ?
+        {emptyStringUtilFunction(image) ?
             // loading spinner
             <div role="status">
                 <svg aria-hidden="true" width={width} height={height} className="text-gray-200 animate-spin fill-green-500" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
