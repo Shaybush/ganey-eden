@@ -9,7 +9,6 @@ interface INavbarModel { }
 
 const Navbar: FC<INavbarModel> = ({ }) => {
     const contriesIcons = navbarContriesConfig;
-    const 
     const [isOpen, setIsOpen] = useState(false);
 
     const handleBarClicked = () => {
