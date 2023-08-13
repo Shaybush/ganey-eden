@@ -4,11 +4,12 @@ export const iconConfig: Record<string, string> = Object.freeze({
     'phone-call': `${configLink}/phone.svg`,
     'check': `${configLink}/check.svg`,
 
-    //logo
+    // logo
     'logo': `${configLink}/logo.svg`,
 
-    //sidebar
+    // header
     'bars': `${configLink}/bars.svg`,
+    'close': `${configLink}/close.svg`,
 
     // contries icons
     'il': `${configLink}/il.svg`,

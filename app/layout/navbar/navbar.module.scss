@@ -1,0 +1,18 @@
+.center_bar {
+    img {
+        // media screen to sizes - Small screens, laptops
+        @media(min-width:769px) {
+            width: 180px !important;
+        }
+
+        // media screen to sizes - iPads, Tablets
+        @media(min-width:481px) and (max-width:768px) {
+            width: 140px !important;
+        }
+
+        // media screen to sizes - Mobile devices
+        @media(max-width:480px) {
+            width: 100px !important;
+        }
+    }
+}
