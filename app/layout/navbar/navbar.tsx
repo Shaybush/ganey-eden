@@ -1,32 +1,48 @@
 'use client';
 
 import IconShared from '@/app/shared/components/icon/icon';
-import Link from 'next/link';
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import { navbarContriesConfig } from './config/navbar.config';
+import style from "./navbar.module.scss";
 
 interface INavbarModel { }
 
 const Navbar: FC<INavbarModel> = ({ }) => {
     const contriesIcons = navbarContriesConfig;
+    const 
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleBarClicked = () => {
+        setIsOpen(!isOpen);
+        console.log(isOpen)
+    };
     return (
         <header className='font-bold shadow-md z-40'>
-            <nav className='nav-nav pl-4 flex justify-between items-center'>
-                {
-                    true &&
-                    <div className='flex items-center'>
-                        {/* countries */}
-                        <div className="flex pl-5">
-                            {contriesIcons.map(country => (
-                                <Link key={country.id} className='mr-3' href={'/'} locale={country.icon}>
-                                    <IconShared iconSrc={country.icon} />
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
-                }
+            <nav className='nav-nav px-4 flex justify-between items-center'>
+                <div className="right-bar">
+                    <span className='cursor-pointer' onClick={() => handleBarClicked()}>
+                        {isOpen ?
+                        <IconShared iconSrc='close' width={40} /> :
+                        <IconShared iconSrc='bars' width={40} />
+                        }
+                    </span>
+                </div>
+                <div className={style.center_bar}>
+                    <IconShared iconSrc='logo' link='/' />
+                </div>
+                <div className="left-bar">
+                    <select name="options" id="" dir='ltr'>
+                        {
+                            contriesIcons.map(country => (
+                                <option key={country.id}>
+                                    {country.locale}
+                                </option>
+                            ))
+                        }
+                    </select>
+                </div>
                 {/* logo */}
-                <IconShared iconSrc='logo' width={250} link='/'/>
+
             </nav>
         </header>
     );
