@@ -1,6 +1,7 @@
 select {
     border: 1px solid lightgray;
     border-radius: 8px;
+    padding: 4px 6px;
     background-color: transparent;
     text-indent: 5px;
     -webkit-appearance: none;
@@ -28,14 +29,14 @@ select {
 
     // media screen to sizes - iPads, Tablets
     @media(min-width:481px) {
-        width: 100px;
+        width: 70px;
         height: 40px;
     }
 
     // media screen to sizes - Mobile devices
     @media(max-width:480px) {
         width: 50px;
-        padding: 4px 0;
         background-image: none;
+        text-align: center;
     }
 }

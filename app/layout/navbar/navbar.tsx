@@ -10,22 +10,22 @@ interface INavbarModel { }
 const Navbar: FC<INavbarModel> = ({ }) => {
     const contriesIcons = navbarContriesConfig;
     const [isOpen, setIsOpen] = useState(false);
+    console.log('isOpen is:',isOpen)
 
-    const handleBarClicked = () => {
-        setIsOpen(!isOpen);
-        console.log(isOpen)
-    };
     return (
         <header className='font-bold shadow-md z-40'>
             <nav className='nav-nav px-4 flex justify-between items-center'>
-                <div className="right-bar">
-                    <span className='cursor-pointer' onClick={() => handleBarClicked()}>
-                        {isOpen ?
-                        <IconShared iconSrc='close' width={40} /> :
-                        <IconShared iconSrc='bars' width={40} />
-                        }
+                <div className={style.right_bar}>
+                    <span className='cursor-pointer bg-black' onClick={() => {
+                        console.log('first')
+                        setIsOpen(!isOpen)}}>
+                        
+                        <IconShared iconSrc={isOpen ? 'close' : 'bars'}  width={30} /> 
+                        
                     </span>
                 </div>
+
+                {/* logo */}
                 <div className={style.center_bar}>
                     <IconShared iconSrc='logo' link='/' />
                 </div>
@@ -40,7 +40,6 @@ const Navbar: FC<INavbarModel> = ({ }) => {
                         }
                     </select>
                 </div>
-                {/* logo */}
 
             </nav>
         </header>
