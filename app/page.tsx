@@ -1,4 +1,5 @@
 'use client';
+
 import stringConst from '@/public/locales/he/main.json';
 
 export default function Index() {

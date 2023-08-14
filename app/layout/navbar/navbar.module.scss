@@ -1,8 +1,12 @@
+@import '@/app/assets/style/variables.module.scss';
+
 .center_bar {
     img {
+        animation: slidein 2s;
+
         // media screen to sizes - Small screens, laptops
         @media(min-width:769px) {
-            width: 180px !important;
+            width: 300px !important;
         }
 
         // media screen to sizes - iPads, Tablets
@@ -17,6 +21,37 @@
     }
 }
 
-.right_bar{
+.right_bar {
     user-select: none;
+
+    img {
+        animation: slidein 2s;
+
+        // media screen to sizes - Small screens, laptops
+        @media(min-width:769px) {
+            width: 50px;
+        }
+
+        // media screen to sizes - iPads, Tablets
+        @media(min-width:481px) and (max-width:768px) {
+            width: 30px;
+        }
+
+        // media screen to sizes - Mobile devices
+        @media(max-width:480px) {
+            width: 25px;
+        }
+    }
+}
+
+@keyframes slidein {
+    0% {
+        margin-right: 5px;
+        opacity: 0;
+    }
+
+    100% {
+        margin-right: 0;
+        opacity: 100;
+    }
 }

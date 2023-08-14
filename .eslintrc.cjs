@@ -97,6 +97,7 @@ module.exports = {
         pathGroups: [
           { pattern: 'react', group: 'builtin' },
           { pattern: '@/**', group: 'internal' },
+          { pattern: '@!(/)**', group: 'external' },
         ],
         pathGroupsExcludedImportTypes: ['react'],
         'newlines-between': 'never',
