@@ -1,13 +1,11 @@
 import React, { FC } from 'react';
 
 interface IProvidersModel {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const Providers: FC<IProvidersModel> = ({ children }) => {
-    return (
-        <div>Providers</div>
-    );
+  return <div>Providers</div>;
 };
 
 export default Providers;

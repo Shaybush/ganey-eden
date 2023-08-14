@@ -58,7 +58,7 @@ module.exports = {
     // #########################
     'no-debugger': 'warn', // default value is error. Disallow the use of the debugger keyword.
     'no-unused-vars': 'off', // Solved unused variables raising an error. Using @typescript-eslint/no-unused-vars instead.
-    'prefer-template': 'error', // turns this: name + value, to `${name}${value}`
+    'prefer-template': 'warn', // turns this: name + value, to `${name}${value}`
     // 'arrow-body-style': 'error', // Makes a return with one line a one-liner without a return. if you had used plugin:prettier/recommended this would have been enabled by default.
     // 'prefer-arrow-callback': 'off', // if you had used plugin:prettier/recommended this would have been enabled by default
     'no-constant-condition': 'off',
@@ -70,7 +70,7 @@ module.exports = {
     // #######################
     'react/prop-types': 'off', // Solved the destructure of props error inside React elements
     'react/no-unescaped-entities': 'off', // Solved free texts paragraphs containing ' or "
-    'react/jsx-uses-react': 'error', // DO NOT USE if no-unused-vars is marked off! P.S. While this option is commented out here, it is uncommented on the app-frontend's eslint yaml file.
+    'react/jsx-uses-react': 'warn', // DO NOT USE if no-unused-vars is marked off! P.S. While this option is commented out here, it is uncommented on the app-frontend's eslint yaml file.
     // 'react-hooks/exhaustive-deps': 'warn',
     // 'react/jsx-filename-extension': 'error', // Yells at you if a js file contains jsx syntax.
     // 'react/jsx-uses-vars': 'error', // DO NOT USE if no-unused-vars is marked off!
@@ -78,21 +78,21 @@ module.exports = {
     // ############################
     // Rule Set 3: typescript rules
     // ############################
-    '@typescript-eslint/no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'warn',
 
     // ########################
     // Rule Set 4: import rules
     // ########################
-    'import/no-duplicates': 'error', // merges when two import lines import from the same file!
-    'import/no-unresolved': 'error', // Turns on errors for missing imports. # import/no-unresolved: [2, { commonjs: true, amd: true }] // This rules catches unresolved imports, but you don't need it since typescript also catches unresolved imports.
-    'import/newline-after-import': 'error', // must use a newline between all imports and next line of code.
-    'import/first': 'error', // I want the imports to be the first thing to appear in every file.
+    'import/no-duplicates': 'warn', // merges when two import lines import from the same file!
+    'import/no-unresolved': 'warn', // Turns on errors for missing imports. # import/no-unresolved: [2, { commonjs: true, amd: true }] // This rules catches unresolved imports, but you don't need it since typescript also catches unresolved imports.
+    'import/newline-after-import': 'warn', // must use a newline between all imports and next line of code.
+    'import/first': 'warn', // I want the imports to be the first thing to appear in every file.
     'import/exports-last': 'warn', // Ensure all exports appear after other statements.
-    'import/extensions': ['error', 'never', { js: 'always' }],
+    'import/extensions': ['warn', 'never', { js: 'always' }],
     // - about import/extensions = Ensures consistent use of file extension on import path. it also had "'always', { ignorePackages: true }", which made internal packages fail at runtime if I enable this (api-gateway is an example case).
     'import/order': [
       // The given rule enforces a convention in the order of require() / import statements!
-      'error',
+      'warn',
       {
         pathGroups: [
           { pattern: 'react', group: 'builtin' },

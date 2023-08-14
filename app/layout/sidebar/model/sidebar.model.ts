@@ -1,6 +1,6 @@
 export interface navbarLinksModel {
-    label: string,
-    link: string,
-    externalRoute: boolean;
-    id: string;
+  label: string;
+  link: string;
+  externalRoute: boolean;
+  id: string;
 }
