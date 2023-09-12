@@ -1,8 +1,8 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
-import Footer from './layout/footer/footer';
-import Navbar from './layout/navbar/navbar';
-import Sidebar from './layout/sidebar/sidebar';
+import Footer from './layout/footer';
+import Navbar from './layout/navbar';
+import Sidebar from './layout/sidebar';
 import type { Metadata } from 'next';
 import './globals.scss';
 
