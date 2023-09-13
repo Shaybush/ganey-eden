@@ -1,5 +1,6 @@
 import React from 'react';
 import { Inter } from 'next/font/google';
+import { Providers } from '@/redux/provider';
 import Footer from './layout/footer';
 import Navbar from './layout/navbar';
 import Sidebar from './layout/sidebar';
@@ -16,15 +17,17 @@ export default async function RootLayout({ children }: Props) {
   return (
     <html suppressHydrationWarning={true} lang='he' dir='rtl'>
       <body suppressHydrationWarning={true} className={inter.className}>
-        <Navbar />
+        <Providers>
+          <Navbar />
 
-        <div className='relative container-flu'>
-          <Sidebar />
+          <div className='relative container-flu'>
+            <Sidebar />
 
-          {children}
-        </div>
+            {children}
+          </div>
 
-        <Footer />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
