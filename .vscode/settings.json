@@ -4,8 +4,8 @@
   "js/ts.implicitProjectConfig.checkJs": true,
   // "eslint.options": { "overrideConfigFile": "./.eslintrc.yaml" },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.addMissingImports": false
+    "source.fixAll.eslint": "explicit",
+    "source.addMissingImports": "never"
   },
   "window.zoomLevel": 0,
   "editor.mouseWheelZoom": false,

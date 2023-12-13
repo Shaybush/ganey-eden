@@ -15,13 +15,14 @@ interface Props {
 
 export default async function RootLayout({ children }: Props) {
   return (
-    <html suppressHydrationWarning={true} lang='he' dir='rtl'>
+     <html suppressHydrationWarning = {true} lang='he' dir='rtl'>
       <body suppressHydrationWarning={true} className={inter.className}>
         <Providers>
           <Navbar />
 
           <div className='relative container-flu'>
             <Sidebar />
+            <div className='ganey-card'></div>
 
             {children}
           </div>
